@@ -1,5 +1,6 @@
 """Chat session + message ORM models."""
 from datetime import datetime
+from typing import Optional
 from uuid import uuid4
 
 from sqlalchemy import JSON, DateTime, ForeignKey, String, Text
@@ -52,7 +53,7 @@ class ChatMessage(Base):
     role: Mapped[str] = mapped_column(String(16), nullable=False)
     # role values: user | assistant | system
     content: Mapped[str] = mapped_column(Text, nullable=False)
-    sources: Mapped[list | None] = mapped_column(JSON, nullable=True)
+    sources: Mapped[Optional[list]] = mapped_column(JSON, nullable=True)
     # sources: list of {document_id, document_name, chunk_index, snippet, score}
 
     created_at: Mapped[datetime] = mapped_column(

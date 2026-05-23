@@ -38,7 +38,16 @@ class Settings(BaseSettings):
     JWT_ALGORITHM: str = "HS256"
     JWT_EXPIRE_MINUTES: int = 60 * 24 * 7  # 1 week
 
-    # ---- OpenAI ----
+    # ---- AI Provider ----
+    # "gemini" (free, default) or "openai" (paid)
+    LLM_PROVIDER: str = "gemini"
+
+    # ---- Google Gemini (default — free tier) ----
+    GOOGLE_API_KEY: str = ""
+    GEMINI_CHAT_MODEL: str = "gemini-1.5-flash-latest"
+    GEMINI_EMBEDDING_MODEL: str = "models/embedding-001"
+
+    # ---- OpenAI (optional — paid) ----
     OPENAI_API_KEY: str = ""
     OPENAI_CHAT_MODEL: str = "gpt-4o-mini"
     OPENAI_EMBEDDING_MODEL: str = "text-embedding-3-small"

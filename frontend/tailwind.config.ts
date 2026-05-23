@@ -30,11 +30,14 @@ const config: Config = {
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",
         },
+        // Brand palette — engineering / fintech feel.
+        // Token names kept for stability; values shifted to a black + blue +
+        // yellow + red mix with white as foreground.
         brand: {
-          violet: "#7C3AED",
-          fuchsia: "#D946EF",
-          cyan: "#06B6D4",
-          indigo: "#6366F1",
+          violet: "#2563EB",   // primary royal blue (most surfaces / buttons)
+          fuchsia: "#FACC15",  // signal yellow (highlights, accent dots, callouts)
+          cyan: "#38BDF8",     // sky blue (links, icons, source chips)
+          indigo: "#EF4444",   // signal red (warnings, accent pops)
         },
       },
       fontFamily: {
@@ -46,8 +49,9 @@ const config: Config = {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+        // Signature gradient: deep blue → sky → yellow spark.
         "brand-gradient":
-          "linear-gradient(135deg, #7C3AED 0%, #D946EF 50%, #06B6D4 100%)",
+          "linear-gradient(135deg, #1D4ED8 0%, #2563EB 35%, #38BDF8 70%, #FACC15 100%)",
       },
       borderRadius: {
         lg: "var(--radius)",

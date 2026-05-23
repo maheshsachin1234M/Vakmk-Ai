@@ -1,5 +1,6 @@
 """Document-related Pydantic schemas."""
 from datetime import datetime
+from typing import Optional
 
 from pydantic import BaseModel, ConfigDict
 
@@ -14,5 +15,5 @@ class DocumentOut(BaseModel):
     size_bytes: int
     chunk_count: int
     status: str
-    error_message: str | None = None
+    error_message: Optional[str] = None
     created_at: datetime

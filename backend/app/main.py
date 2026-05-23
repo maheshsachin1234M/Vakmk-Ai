@@ -41,12 +41,18 @@ app = FastAPI(
 )
 
 # ---- CORS ----
+# Use a regex so any localhost/127.0.0.1 port is allowed in dev — eliminates
+# the IPv4/IPv6/port mismatch class of bugs entirely. Explicit origins from
+# env still work for production.
 app.add_middleware(
     CORSMiddleware,
     allow_origins=settings.cors_origins,
+    allow_origin_regex=r"https?://(localhost|127\.0\.0\.1|0\.0\.0\.0)(:\d+)?",
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
+    expose_headers=["*"],
+    max_age=600,
 )
 
 

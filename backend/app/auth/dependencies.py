@@ -1,4 +1,8 @@
 """FastAPI dependencies for auth + DB."""
+from __future__ import annotations
+
+from typing import Optional
+
 from fastapi import Depends, HTTPException, status
 from fastapi.security import OAuth2PasswordBearer
 from jose import JWTError
@@ -27,7 +31,7 @@ def get_current_user(
 
     try:
         payload = decode_access_token(token)
-        user_id: str | None = payload.get("sub")
+        user_id: Optional[str] = payload.get("sub")
         if not user_id:
             raise credentials_exc
     except JWTError:

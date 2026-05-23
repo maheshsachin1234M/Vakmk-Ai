@@ -18,18 +18,18 @@ export function Logo({ size = 36, className, withWordmark = false }: LogoProps) 
         height={size}
         viewBox="0 0 48 48"
         xmlns="http://www.w3.org/2000/svg"
-        className="drop-shadow-[0_0_18px_rgba(124,58,237,0.45)]"
+        className="drop-shadow-[0_0_18px_rgba(37,99,235,0.50)]"
         aria-label="VAKMK AI"
       >
         <defs>
           <linearGradient id="vakmk-grad" x1="0" y1="0" x2="48" y2="48" gradientUnits="userSpaceOnUse">
-            <stop offset="0" stopColor="#7C3AED" />
-            <stop offset="0.55" stopColor="#D946EF" />
-            <stop offset="1" stopColor="#06B6D4" />
+            <stop offset="0" stopColor="#1D4ED8" />
+            <stop offset="0.55" stopColor="#38BDF8" />
+            <stop offset="1" stopColor="#FACC15" />
           </linearGradient>
           <radialGradient id="vakmk-glow" cx="24" cy="24" r="22" gradientUnits="userSpaceOnUse">
-            <stop offset="0" stopColor="#7C3AED" stopOpacity="0.45" />
-            <stop offset="1" stopColor="#7C3AED" stopOpacity="0" />
+            <stop offset="0" stopColor="#2563EB" stopOpacity="0.50" />
+            <stop offset="1" stopColor="#2563EB" stopOpacity="0" />
           </radialGradient>
         </defs>
 
@@ -54,7 +54,7 @@ export function Logo({ size = 36, className, withWordmark = false }: LogoProps) 
           rx="2"
           stroke="url(#vakmk-grad)"
           strokeWidth="1.4"
-          fill="rgba(124,58,237,0.08)"
+          fill="rgba(37,99,235,0.10)"
         />
         <line x1="16" y1="19" x2="25" y2="19" stroke="url(#vakmk-grad)" strokeWidth="1.2" strokeLinecap="round" />
         <line x1="16" y1="22.5" x2="23" y2="22.5" stroke="url(#vakmk-grad)" strokeWidth="1.2" strokeLinecap="round" opacity="0.8" />
@@ -77,12 +77,12 @@ export function Logo({ size = 36, className, withWordmark = false }: LogoProps) 
           opacity="0.7"
         />
 
-        {/* Neural nodes */}
+        {/* Neural nodes — blue / yellow / red mix */}
         <circle cx="36" cy="24" r="2.2" fill="url(#vakmk-grad)" />
         <circle cx="36" cy="24" r="1" fill="#fff" />
         <circle cx="34" cy="24" r="1.4" fill="url(#vakmk-grad)" opacity="0.8" />
-        <circle cx="28" cy="16" r="1.2" fill="#D946EF" />
-        <circle cx="28" cy="32" r="1.2" fill="#06B6D4" />
+        <circle cx="28" cy="16" r="1.2" fill="#FACC15" />
+        <circle cx="28" cy="32" r="1.2" fill="#EF4444" />
 
         {/* Brain spark inside doc */}
         <circle cx="20.5" cy="29" r="1.1" fill="url(#vakmk-grad)" />

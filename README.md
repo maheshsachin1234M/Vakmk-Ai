@@ -9,8 +9,9 @@ VAKMK AI is a futuristic AI-powered Engineering Intelligence Platform. It pairs 
 ## Highlights
 
 - **End-to-end RAG pipeline** — chunking → embeddings → vector indexing → retrieval → citation-grounded generation.
+- **Two-provider AI** — Google Gemini (free tier, default) or OpenAI (paid). Self-healing model discovery: backend queries the provider for available models and picks the first one your key supports.
 - **ChromaDB vector store** with persistent storage, cosine similarity, and owner-scoped metadata filtering.
-- **Premium dark UI** — Next.js 15 App Router, TypeScript, Tailwind, Framer Motion, shadcn-style components, gradient glows, glassmorphism.
+- **Premium dark UI** — Next.js 15 App Router, TypeScript, Tailwind, Framer Motion. Black + royal-blue + signal-yellow palette with glassmorphism and gradient glows.
 - **Real auth** — JWT (HS256), bcrypt hashed passwords, protected routes, per-user document isolation.
 - **Streaming-ready** — generation layer exposes both single-shot and streaming token APIs.
 - **Production scaffolding** — Dockerfile per service, docker-compose for Postgres + backend + frontend, env-driven config, healthchecks.

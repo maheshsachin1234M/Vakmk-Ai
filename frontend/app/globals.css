@@ -28,19 +28,19 @@
 
   .dark,
   :root {
-    /* Dark theme — default */
-    --background: 240 10% 4%;
+    /* Dark theme — deep black base with royal-blue focus ring */
+    --background: 220 20% 4%;
     --foreground: 0 0% 98%;
-    --card: 240 8% 7%;
+    --card: 220 14% 7%;
     --card-foreground: 0 0% 98%;
-    --border: 240 6% 14%;
-    --input: 240 6% 14%;
-    --ring: 262 83% 64%;
-    --muted: 240 6% 10%;
-    --muted-foreground: 240 5% 65%;
-    --accent: 240 6% 14%;
+    --border: 220 10% 14%;
+    --input: 220 10% 14%;
+    --ring: 220 90% 60%;
+    --muted: 220 10% 10%;
+    --muted-foreground: 220 8% 65%;
+    --accent: 220 10% 14%;
     --accent-foreground: 0 0% 98%;
-    --primary: 262 83% 64%;
+    --primary: 220 90% 55%;
     --primary-foreground: 0 0% 100%;
   }
 
@@ -56,14 +56,14 @@
     @apply bg-background text-foreground antialiased;
     font-feature-settings: "rlig" 1, "calt" 1, "ss01" 1;
     background-image:
-      radial-gradient(at 0% 0%, hsl(262 83% 58% / 0.12) 0px, transparent 50%),
-      radial-gradient(at 100% 0%, hsl(195 92% 50% / 0.10) 0px, transparent 50%),
-      radial-gradient(at 50% 100%, hsl(294 84% 60% / 0.08) 0px, transparent 50%);
+      radial-gradient(at 0% 0%, hsl(220 90% 50% / 0.14) 0px, transparent 50%),
+      radial-gradient(at 100% 0%, hsl(199 89% 55% / 0.10) 0px, transparent 50%),
+      radial-gradient(at 50% 100%, hsl(45 95% 55% / 0.05) 0px, transparent 50%);
     background-attachment: fixed;
   }
 
   ::selection {
-    background-color: hsl(262 83% 64% / 0.35);
+    background-color: hsl(220 90% 55% / 0.40);
     color: hsl(0 0% 100%);
   }
 
@@ -103,9 +103,9 @@
     padding: 1px;
     background: linear-gradient(
       135deg,
-      rgba(124, 58, 237, 0.6),
-      rgba(217, 70, 239, 0.4),
-      rgba(6, 182, 212, 0.6)
+      rgba(37, 99, 235, 0.7),     /* royal blue */
+      rgba(250, 204, 21, 0.35),   /* yellow */
+      rgba(56, 189, 248, 0.6)     /* sky blue */
     );
     -webkit-mask:
       linear-gradient(#000 0 0) content-box,
@@ -149,7 +149,7 @@
     display: inline-block;
     margin-left: 2px;
     animation: blink 1s steps(2) infinite;
-    color: hsl(262 83% 70%);
+    color: hsl(220 90% 70%);
   }
 
   @keyframes blink {
