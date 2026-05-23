@@ -1,0 +1,65 @@
+# =====================================================
+# VAKMK AI — Render Blueprint
+# Deploys: backend (Docker) + free PostgreSQL database
+# Frontend is deployed separately on Vercel (better for Next.js).
+#
+# Usage: in Render dashboard click "New +" → "Blueprint" →
+# pick this repo → Render reads this file and creates everything.
+# =====================================================
+
+services:
+  - type: web
+    name: vakmk-ai-backend
+    runtime: docker
+    plan: free
+    region: oregon          # change if you prefer a different region
+    branch: main
+    rootDir: backend
+    dockerfilePath: ./Dockerfile
+    dockerContext: .
+    healthCheckPath: /health
+    autoDeploy: true
+
+    envVars:
+      # Secrets — set these in the Render dashboard, NOT here
+      - key: GOOGLE_API_KEY
+        sync: false
+      - key: SECRET_KEY
+        generateValue: true        # Render auto-generates a strong random value
+      - key: BACKEND_CORS_ORIGINS
+        sync: false                # set to your Vercel URL after frontend deploys
+
+      # Database — linked from the postgres service below
+      - key: DATABASE_URL
+        fromDatabase:
+          name: vakmk-postgres
+          property: connectionString
+
+      # AI provider (Gemini by default — free tier)
+      - key: LLM_PROVIDER
+        value: gemini
+      - key: GEMINI_CHAT_MODEL
+        value: gemini-1.5-flash-latest
+      - key: GEMINI_EMBEDDING_MODEL
+        value: models/embedding-001
+
+      # RAG knobs
+      - key: CHUNK_SIZE
+        value: "1000"
+      - key: CHUNK_OVERLAP
+        value: "200"
+      - key: TOP_K_RETRIEVAL
+        value: "5"
+
+      # Misc
+      - key: ENVIRONMENT
+        value: production
+      - key: PROJECT_NAME
+        value: VAKMK AI
+
+databases:
+  - name: vakmk-postgres
+    plan: free
+    region: oregon
+    databaseName: vakmk_ai
+    user: vakmk
