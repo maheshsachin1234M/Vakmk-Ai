@@ -5,12 +5,12 @@ import { ArrowRight, FileText, Search as SearchIcon } from "lucide-react";
 import { useState } from "react";
 import { toast } from "sonner";
 
-import { Button } from "@/components/ui/Button";
-import { Input } from "@/components/ui/Input";
-import { Spinner } from "@/components/ui/Spinner";
-import { getErrorMessage } from "@/lib/api";
-import { chatService } from "@/services/chat.service";
-import type { SourceCitation } from "@/types";
+import { Button } from "../../../components/ui/Button";
+import { Input } from "../../../components/ui/Input";
+import { Spinner } from "../../../components/ui/Spinner";
+import { getErrorMessage } from "../../../lib/api";
+import { chatService } from "../../../services/chat.service";
+import type { SourceCitation } from "../../../types";
 
 /**
  * Semantic search page — reuses the /chat/ask endpoint server-side to surface

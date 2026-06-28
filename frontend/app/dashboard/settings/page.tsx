@@ -2,10 +2,10 @@
 
 import { LogOut, ShieldCheck, UserCircle2 } from "lucide-react";
 
-import { Button } from "@/components/ui/Button";
-import { Card } from "@/components/ui/Card";
-import { useAuth } from "@/hooks/useAuth";
-import { initials } from "@/lib/utils";
+import { Button } from "../../../components/ui/Button";
+import { Card } from "../../../components/ui/Card";
+import { useAuth } from "../../../hooks/useAuth";
+import { initials } from "../../../lib/utils";
 
 export default function SettingsPage() {
   const { user, logout } = useAuth();

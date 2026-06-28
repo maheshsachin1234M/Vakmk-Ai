@@ -11,9 +11,9 @@ import {
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
-import { Logo } from "@/components/shared/Logo";
-import { useAuth } from "@/hooks/useAuth";
-import { cn, initials } from "@/lib/utils";
+import { Logo } from "../shared/Logo";
+import { useAuth } from "../../hooks/useAuth";
+import { cn, initials } from "../../lib/utils";
 
 const nav = [
   { href: "/dashboard", label: "Overview", icon: LayoutDashboard },

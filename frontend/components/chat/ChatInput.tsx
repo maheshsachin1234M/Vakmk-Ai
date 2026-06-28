@@ -3,9 +3,9 @@
 import { Send } from "lucide-react";
 import { useEffect, useRef } from "react";
 
-import { Button } from "@/components/ui/Button";
-import { Spinner } from "@/components/ui/Spinner";
-import { cn } from "@/lib/utils";
+import { Button } from "../ui/Button";
+import { Spinner } from "../ui/Spinner";
+import { cn } from "../../lib/utils";
 
 interface Props {
   value: string;

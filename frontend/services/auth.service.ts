@@ -1,5 +1,5 @@
-import { api, API_PREFIX } from "@/lib/api";
-import type { AuthToken, User } from "@/types";
+import { api, API_PREFIX } from "../lib/api";
+import type { AuthToken, User } from "../types";
 
 export const authService = {
   async signup(payload: {

@@ -14,8 +14,8 @@ import {
 } from "lucide-react";
 import Link from "next/link";
 
-import { Button } from "@/components/ui/Button";
-import { Logo } from "@/components/shared/Logo";
+import { Button } from "../components/ui/Button";
+import { Logo } from "../components/shared/Logo";
 
 const features = [
   {

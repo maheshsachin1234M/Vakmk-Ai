@@ -5,12 +5,12 @@ import { ArrowUpRight, FileText, MessageSquare, Search, Sparkles } from "lucide-
 import Link from "next/link";
 import { useEffect, useState } from "react";
 
-import { Logo } from "@/components/shared/Logo";
-import { useAuth } from "@/hooks/useAuth";
-import { documentService } from "@/services/document.service";
-import { chatService } from "@/services/chat.service";
-import type { ChatSession, DocumentItem } from "@/types";
-import { timeAgo } from "@/lib/utils";
+import { Logo } from "../../components/shared/Logo";
+import { useAuth } from "../../hooks/useAuth";
+import { documentService } from "../../services/document.service";
+import { chatService } from "../../services/chat.service";
+import type { ChatSession, DocumentItem } from "../../types";
+import { timeAgo } from "../../lib/utils";
 
 export default function DashboardHome() {
   const { user } = useAuth();

@@ -2,7 +2,7 @@
  * VAKMK AI Logo — futuristic brain + neural document mark.
  * Pure SVG, scalable, dark-mode native, no external assets.
  */
-import { cn } from "@/lib/utils";
+import { cn } from "../../lib/utils";
 
 interface LogoProps {
   size?: number;

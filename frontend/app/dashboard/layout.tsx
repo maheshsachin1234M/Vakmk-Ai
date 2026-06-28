@@ -2,9 +2,9 @@
 
 import { Loader2 } from "lucide-react";
 
-import { MobileNav } from "@/components/dashboard/MobileNav";
-import { Sidebar } from "@/components/dashboard/Sidebar";
-import { useAuth } from "@/hooks/useAuth";
+import { MobileNav } from "../../components/dashboard/MobileNav";
+import { Sidebar } from "../../components/dashboard/Sidebar";
+import { useAuth } from "../../hooks/useAuth";
 
 export default function DashboardLayout({
   children,

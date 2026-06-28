@@ -1,5 +1,5 @@
-import { api, API_PREFIX } from "@/lib/api";
-import type { ChatMessage, ChatResponse, ChatSession } from "@/types";
+import { api, API_PREFIX } from "../lib/api";
+import type { ChatMessage, ChatResponse, ChatSession } from "../types";
 
 export const chatService = {
   async ask(payload: {

@@ -6,9 +6,9 @@ import ReactMarkdown from "react-markdown";
 import rehypeHighlight from "rehype-highlight";
 import remarkGfm from "remark-gfm";
 
-import { Logo } from "@/components/shared/Logo";
-import { cn } from "@/lib/utils";
-import type { ChatMessage } from "@/types";
+import { Logo } from "../shared/Logo";
+import { cn } from "../../lib/utils";
+import type { ChatMessage } from "../../types";
 
 interface Props {
   message: ChatMessage;

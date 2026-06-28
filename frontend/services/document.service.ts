@@ -1,5 +1,5 @@
-import { api, API_PREFIX } from "@/lib/api";
-import type { DocumentItem } from "@/types";
+import { api, API_PREFIX } from "../lib/api";
+import type { DocumentItem } from "../types";
 
 export const documentService = {
   async list(): Promise<DocumentItem[]> {

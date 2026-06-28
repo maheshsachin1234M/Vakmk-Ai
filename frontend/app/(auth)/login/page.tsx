@@ -7,12 +7,12 @@ import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { toast } from "sonner";
 
-import { Logo } from "@/components/shared/Logo";
-import { Button } from "@/components/ui/Button";
-import { Card } from "@/components/ui/Card";
-import { Input } from "@/components/ui/Input";
-import { useAuth } from "@/hooks/useAuth";
-import { getErrorMessage } from "@/lib/api";
+import { Logo } from "../../../components/shared/Logo";
+import { Button } from "../../../components/ui/Button";
+import { Card } from "../../../components/ui/Card";
+import { Input } from "../../../components/ui/Input";
+import { useAuth } from "../../../hooks/useAuth";
+import { getErrorMessage } from "../../../lib/api";
 
 export default function LoginPage() {
   const router = useRouter();

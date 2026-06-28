@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Inter, Space_Grotesk } from "next/font/google";
 import { Toaster } from "sonner";
 
-import { AnimatedBackground } from "@/components/shared/AnimatedBackground";
+import { AnimatedBackground } from "../components/shared/AnimatedBackground";
 
 import "./globals.css";
 

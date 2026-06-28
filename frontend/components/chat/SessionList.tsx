@@ -4,12 +4,12 @@ import { MessageSquarePlus, Trash2 } from "lucide-react";
 import { useState } from "react";
 import { toast } from "sonner";
 
-import { Button } from "@/components/ui/Button";
-import { Spinner } from "@/components/ui/Spinner";
-import { getErrorMessage } from "@/lib/api";
-import { cn, timeAgo } from "@/lib/utils";
-import { chatService } from "@/services/chat.service";
-import type { ChatSession } from "@/types";
+import { Button } from "../ui/Button";
+import { Spinner } from "../ui/Spinner";
+import { getErrorMessage } from "../../lib/api";
+import { cn, timeAgo } from "../../lib/utils";
+import { chatService } from "../../services/chat.service";
+import type { ChatSession } from "../../types";
 
 interface Props {
   sessions: ChatSession[];

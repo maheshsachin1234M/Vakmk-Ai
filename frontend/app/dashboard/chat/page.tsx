@@ -5,15 +5,15 @@ import { useSearchParams } from "next/navigation";
 import { Suspense, useEffect, useRef, useState } from "react";
 import { toast } from "sonner";
 
-import { ChatInput } from "@/components/chat/ChatInput";
-import { EmptyState } from "@/components/chat/EmptyState";
-import { MessageBubble } from "@/components/chat/MessageBubble";
-import { SessionList } from "@/components/chat/SessionList";
-import { Logo } from "@/components/shared/Logo";
-import { getErrorMessage } from "@/lib/api";
-import { chatService } from "@/services/chat.service";
-import { documentService } from "@/services/document.service";
-import type { ChatMessage, ChatSession, DocumentItem } from "@/types";
+import { ChatInput } from "../../../components/chat/ChatInput";
+import { EmptyState } from "../../../components/chat/EmptyState";
+import { MessageBubble } from "../../../components/chat/MessageBubble";
+import { SessionList } from "../../../components/chat/SessionList";
+import { Logo } from "../../../components/shared/Logo";
+import { getErrorMessage } from "../../../lib/api";
+import { chatService } from "../../../services/chat.service";
+import { documentService } from "../../../services/document.service";
+import type { ChatMessage, ChatSession, DocumentItem } from "../../../types";
 
 function ChatWorkspaceInner() {
   const searchParams = useSearchParams();

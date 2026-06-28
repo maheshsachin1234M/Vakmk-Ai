@@ -3,9 +3,9 @@
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 
-import { clearToken, getToken, setToken } from "@/lib/api";
-import { authService } from "@/services/auth.service";
-import type { User } from "@/types";
+import { clearToken, getToken, setToken } from "../lib/api";
+import { authService } from "../services/auth.service";
+import type { User } from "../types";
 
 interface AuthState {
   user: User | null;

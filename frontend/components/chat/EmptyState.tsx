@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import { Sparkles } from "lucide-react";
 
-import { Logo } from "@/components/shared/Logo";
+import { Logo } from "../shared/Logo";
 
 const examples = [
   "Summarize the architecture decisions in this RFC.",

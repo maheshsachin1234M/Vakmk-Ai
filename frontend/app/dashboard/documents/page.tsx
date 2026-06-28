@@ -5,12 +5,12 @@ import { FileText, Loader2, Trash2, Upload } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 import { toast } from "sonner";
 
-import { Button } from "@/components/ui/Button";
-import { Spinner } from "@/components/ui/Spinner";
-import { getErrorMessage } from "@/lib/api";
-import { formatBytes, timeAgo } from "@/lib/utils";
-import { documentService } from "@/services/document.service";
-import type { DocumentItem } from "@/types";
+import { Button } from "../../../components/ui/Button";
+import { Spinner } from "../../../components/ui/Spinner";
+import { getErrorMessage } from "../../../lib/api";
+import { formatBytes, timeAgo } from "../../../lib/utils";
+import { documentService } from "../../../services/document.service";
+import type { DocumentItem } from "../../../types";
 
 export default function DocumentsPage() {
   const [docs, setDocs] = useState<DocumentItem[]>([]);
